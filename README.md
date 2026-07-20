@@ -1,6 +1,6 @@
 <span align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![tests](https://github.com/billwallis/cachetronaut/actions/workflows/tests.yaml/badge.svg)](https://github.com/billwallis/cachetronaut/actions/workflows/tests.yaml)
 [![coverage](https://raw.githubusercontent.com/billwallis/cachetronaut/refs/heads/main/coverage.svg)](https://smarie.github.io/python-genbadge/)
 
