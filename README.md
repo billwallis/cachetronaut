@@ -1,7 +1,6 @@
 <span align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)](https://www.python.org/downloads/)
-[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![tests](https://github.com/billwallis/cachetronaut/actions/workflows/tests.yaml/badge.svg)](https://github.com/billwallis/cachetronaut/actions/workflows/tests.yaml)
 [![coverage](https://raw.githubusercontent.com/billwallis/cachetronaut/refs/heads/main/coverage.svg)](https://smarie.github.io/python-genbadge/)
 
@@ -21,7 +20,7 @@ Utilities for long-lived caches.
 Install directly from source:
 
 ```shell
-pip install pip@git+https://github.com/billwallis/cachetronaut@v0.0.1
+pip install cachetronaut@git+https://github.com/billwallis/cachetronaut@v0.0.1
 ```
 
 ## Usage
