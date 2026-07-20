@@ -9,17 +9,24 @@ on:
 
 jobs:
   tests:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: ["windows-latest", "macos-latest", "ubuntu-latest"]
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
     steps:
       - name: 🛎️ Check out repository
         uses: actions/checkout@v6
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v6
-        with: {python-version-file: "pyproject.toml"}
 
       - name: 🔨 Install dependencies
-        run: pip install --editable . --group test
+        run: |
+          python --version
+          pip install --editable . --group test
 
       - name: ✅ Run unit tests
-        run: pytest -vvv
+        run: |
+          coverage run -m pytest -vvv
+          coverage report --no-skip-covered
