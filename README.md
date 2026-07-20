@@ -16,6 +16,37 @@
 
 Utilities for long-lived caches.
 
+## Installation
+
+Install directly from source:
+
+```shell
+pip install pip@git+https://github.com/billwallis/cachetronaut@v0.0.1
+```
+
+## Usage
+
+Currently, this exposes a single decorator, `file_cache`, which takes a filepath and a timedelta expiration:
+
+```python
+import datetime
+import pathlib
+
+import cachetronaut
+
+@cachetronaut.file_cache(
+    filepath=pathlib.Path("path/to/file.pickle"),
+    expiration=datetime.timedelta(hours=1),
+)
+def some_expensive_computation():
+    # do expensive thing
+    return expensive_result
+```
+
+The decorator uses [pickle](https://docs.python.org/3/library/pickle.html) to write the result to a file, hence the `.pickle` extension in the example above -- but you can use whatever extension you want.
+
+The cached files will not be deleted without replacement. If a cached file has "expired", this will only mean that it will be regenerated at runtime prior to being used.
+
 ## Contributing
 
 Install the dependencies:
